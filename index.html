@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-    <title>Simple Page</title>
-        <link rel="stylesheet" href="styles.css">
+
+  <title>Hamburger Menu Task</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Top purple bar -->
-    <div class="top-bar"></div>
-
-    <!-- Main header/navigation section -->
-    <header class="navbar">
-        <div class="logo">LOGO</div>
-        <nav class="nav-links">
-            <!-- The 'Home' link appears slightly darker/selected in the image -->
-            <a href="" class="active">Home</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
-        </nav>
-       
-        <a href="#" class="btn">Get Started</a>
-    </header>
-
-    <!-- Main content area (empty white space) -->
-    <main class="content"></main>
-
+  <header>
+    <h1>Logo</h1>
+    <input class="menu-btn" type="checkbox" id="menu-btn">
+    <label class="menu-icon" for="menu-btn">
+      <span class="navicon"></span>
+    </label>
+    <nav class="menu">
+      <a href="#" class="nav-item">Home</a>
+      <a href="#" class="nav-item">Deployment</a>
+      <a href="#" class="nav-item">Responsive</a>
+      <a href="#" class="nav-item">Mobile</a>
+    </nav>
+  </header>
+  <main>
+    <p>Your page content here. Menu works on mobile: click hamburger to toggle.</p>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
