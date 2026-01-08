@@ -1,34 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  <title>Hamburger Menu Task</title>
-  <link rel="stylesheet" href="style.css">
+.mobile-container {
+  max-width: 4800px;
+  margin: auto;
+  background-color: White;
+  height: 800px;
+  color: black;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: light blue;
+  color: white;
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Logo</h1>
-    <input class="menu-btn" type="checkbox" id="menu-btn">
-    <label class="menu-icon" for="menu-btn">
-      <span class="navicon"></span>
-    </label>
-    <nav class="menu">
-      <a href="#" class="nav-item">Home</a>
-      <a href="#" class="nav-item">About</a>
-      <a href="#" class="nav-item">Service</a>
-      <a href="#" class="nav-item">Contact</a>
-    </nav>
-  </header>
-  <main>
-<br>
-<br>
-<h1> 	Day- 4 <br>
-	Task Completed.
-</h1>
-<br>
-<br>
-    <p>Name : <b>Kashish </b></p>
-  </main>
-  <script src="script.js"></script>
+
+<div class="mobile-container">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">Satic</a>
+  <div id="myLinks">
+    <a href="#news">Home</a>
+    <a href="#contact">About</a>
+    <a href="#about">Service</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div style="padding-left:16px"Day 4</h3>
+  <p> Task Completed. </p>
+  <b><p>Name: Kashish</p>
+
+</b></div>
+
+
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
 </body>
 </html>
