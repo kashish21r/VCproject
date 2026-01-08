@@ -1,4 +1,4 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box;  }
 
 header {
   display: flex;
@@ -6,6 +6,7 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background: #f4f4f4;
+background-color: powderblue;
 }
 
 h1 { font-size: 1.5rem; }
