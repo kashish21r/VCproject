@@ -19,7 +19,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: Lightblue;
   position: relative;
 }
 
@@ -52,6 +52,52 @@ body {
   background-color: light blue;
   color: white;
 }
+
+.content {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+#search-input {
+  padding: 10px 14px;
+  width: 220px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Focus state */
+#search-input:focus {
+  outline: none;
+  border-color: #111827;
+}
+
+#search-btn {
+  padding: 10px 14px;
+  border: none;
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#search-btn:hover {
+  background-color: #1f2937;
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -60,7 +106,7 @@ body {
 
 <!-- Top Navigation Menu -->
 <div class="topnav">
-  <h3>Satic</h3>
+  <h2>Satic</h2>
   <div id="myLinks">
     <a href="#Home">Home</a>
     <a href="#About">About</a>
@@ -71,16 +117,44 @@ body {
   </a>
 </div>
 
-<div style="padding-left:16px"Day 4</h3>
+<main class="content">
+    <h1>Day 5 Task</h1>
+
+    <!-- Search bar -->
+    <form id="search" class="search-bar">
+      <input
+        type="text"
+        id="search-input"
+        name="search"
+        placeholder="Search"
+        aria-label="Search"
+	
+      />
+	<span class="search-icon" onclick="showNoResults()">    
+  <button type="submit" id="search-btn" align="center">🔍</button>
+    </form>
+  </main>
+<div class="search-container">
+	</span>
+</div>
+
+
+
+<!-- <div style="padding-left:16px"</h3>
   <p> Task Completed. </p>
   <b><p>Name: Kashish</p>
 
 </b></div>
 
-
+-->
 </div>
 
 <script>
+	function showNoResults(){
+		alert("No Results found");
+}
+
+
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -89,6 +163,8 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+
 </script>
 
 </body>
