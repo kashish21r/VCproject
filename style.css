@@ -95,7 +95,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    transform: translateY(-400px);
+    transform: translateY(15px);
 }
 
 .cards-grid {
