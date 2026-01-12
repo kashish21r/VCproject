@@ -1,33 +1,179 @@
-/* Hide the checkbox */
-input[type="checkbox"] {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden; /* Removes vertical scroll */
+
+}
+
+.mobile-container {
+  max-width: 4800px;
+  margin: auto;
+  /*background-color: rgb(231, 235, 179); */
+  height: 800px;
+  color: rgba(255, 255, 255, 0.815);
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(9, 51, 65);
+  position: relative;
+}
+
+.topnav #myLinks {
   display: none;
 }
 
-/* Style the hamburger icon (label) */
-.hamburger-icon {
-  cursor: pointer;
-  /* Add styling for your three lines using span and pseudo-elements (::before, ::after) */
-}
-
-/* Hide the menu by default (e.g., off-screen) */
-.menu-links {
-  display: none;
-  /* or transform: translateX(-100%); for a sliding animation */
-}
-
-/* Show the menu when the sibling checkbox is checked */
-input[type="checkbox"]:checked ~ .menu-links {
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
   display: block;
-  /* or transform: translateX(0); */
 }
 
-/* Use media queries to only apply this hamburger menu on smaller screens */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: light blue;
+  color: white;
+}
+
+.content {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+#search-input {
+  padding: 10px 14px;
+  width: 220px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Focus state */
+#search-input:focus {
+  outline: none;
+  border-color: #111827;
+}
+
+#search-btn {
+  padding: 10px 14px;
+  border: none;
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#search-btn:hover {
+  background-color: #1f2937;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    transform: translateY(-400px);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    pointer-events: none; /* Disables image click */
+    margin-top: -20px;
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .hamburger-icon {
-    display: block; /* Show icon on mobile */
-  }
-  .navbar .menu-links {
-    /* Mobile specific styles (e.g., full width, vertical links) */
-  }
-  /* Ensure desktop menu is hidden on mobile if needed */
+    body {
+        padding: 1rem;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content {
+        padding: 1.25rem;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
 }
