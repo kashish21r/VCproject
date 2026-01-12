@@ -1,7 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
    /*  overflow-y: hidden; Removes vertical scroll */
-
 }
 
 .mobile-container {
@@ -117,10 +116,11 @@ body {
 
 .card-image {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     pointer-events: none; /* Disables image click */
     margin-top: -20px;
+  max-width: 100%;
 }
 
 .card-content {
