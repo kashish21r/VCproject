@@ -116,7 +116,7 @@ body {
 
 .card-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     pointer-events: none; /* Disables image click */
     margin-top: -20px;
