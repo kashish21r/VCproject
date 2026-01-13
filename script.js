@@ -2,6 +2,8 @@ function showNoResults(){
 		alert("No Results found");
 }
 
+//Alert//
+	
 // Reusable card data structure
 const cardData = [
     {
@@ -48,8 +50,6 @@ function renderCards() {
 }
 
 document.addEventListener('DOMContentLoaded', renderCards);
-
-
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', renderCards);
 
@@ -61,4 +61,21 @@ function myFunction() {
   } else {
     x.style.display = "block";
   }
+}
+/****************************************** ALERT */
+const notification = document.getElementById("notification");
+const message = document.getElementById("message");
+
+function showSuccess() {
+  message.textContent = "Success! Task deployed successfully.";
+  notification.className = "notification success";
+}
+
+function showError() {
+  message.textContent = "Error! Something went wrong.";
+  notification.className = "notification error";
+}
+
+function dismiss() {
+  notification.classList.add("Notification dismiss");
 }
