@@ -63,19 +63,23 @@ function myFunction() {
   }
 }
 /****************************************** ALERT */
-const notification = document.getElementById("notification");
-const message = document.getElementById("message");
-
-function showSuccess() {
-  message.textContent = "Success! Task deployed successfully.";
-  notification.className = "notification success";
-}
-
-function showError() {
-  message.textContent = "Error! Something went wrong.";
-  notification.className = "notification error";
-}
-
-function dismiss() {
-  notification.classList.add("Notification dismiss");
-}
+   function showNotification(message, type = 'success') {
+            const container = document.getElementById('notificationContainer');
+            const notification = document.createElement('div');
+            
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <span>${message}</span>
+                <button class="close-btn" onclick="this.closest('.notification').classList.add('exit'); setTimeout(() => this.closest('.notification').remove(), 300);">&times;</button>
+            `;
+            
+            container.appendChild(notification);
+            
+            // Auto dismiss after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.classList.add('exit');
+                    setTimeout(() => notification.remove(), 300);
+                }
+            }, 5000);
+        }
