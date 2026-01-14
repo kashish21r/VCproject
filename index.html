@@ -43,6 +43,29 @@
 <div class="search-container">
 	</span>
 </div>
+
+ 
+    <!-- Day 8 Task: Form Input & Submit -->
+<section class="day8-form">
+  <h2>Day 8 – Form Input & Submit</h2>
+
+  <form id="contactForm">
+    <!-- Label connected to input -->
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Enter your name" />
+
+    <!-- Error message -->
+    <p id="errorMsg" class="error" style="display:none">
+  This field is required
+    </p>
+
+    <!-- Submit button -->
+    <button type="submit" id="submitBtn" disabled>Submit</button>
+  </form>
+
+  <p id="successMsg" class="success"></p>
+</section>
+
    
     
    <div class="container">
@@ -60,6 +83,7 @@
 -->
 </div>
 
+
     <!-- Notification Container -->
     <div class="notification-container" id="notificationContainer"></div>
 
@@ -75,6 +99,8 @@
             Show Error
         </button>
     </div>
+
+ 
    
 
 <script src="script.js"></script>

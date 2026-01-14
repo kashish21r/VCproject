@@ -257,4 +257,57 @@ body {
         font-size: 1.25rem;
     }
 }
-/****************************** Day 7 *****************/
+/****************************** Day 7 ************
+
+
+  Day 8: Form Input & Submit
+================================ */
+
+.day8-form {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  max-width: 400px;
+}
+
+.day8-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.day8-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.day8-form .error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.day8-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.day8-form button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.day8-form .success {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
