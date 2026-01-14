@@ -257,10 +257,55 @@ body {
         font-size: 1.25rem;
     }
 }
-/****************************** Day 7 ************
+/****************************** Test Button ****************/
+.test-section {
+    padding: 20px;
+    margin: 20px 0;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.test-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.test-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 300px;
+}
+
+.test-btn.success {
+    background: #4CAF50;
+    color: white;
+}
+
+.test-btn.error {
+    background: #f44336;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .test-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .test-btn {
+        width: auto;
+    }
+}
 
 
-  Day 8: Form Input & Submit
+  /*Day 8: Form Input & Submit
 ================================ */
 
 .day8-form {
