@@ -356,3 +356,64 @@ body {
   color: green;
   font-weight: bold;
 }
+/*******************Day 9 *********************/
+.footer {
+  background: #1e293b;
+  color: #cbd5e1;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  color: white;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #334155;
+  padding-top: 10px;
+}
+
+
+
+/************************** GO-TO-TOP BUTTON ************/
+.go-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Above content but below notification */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+.go-to-top-btn:hover {
+  background-color: #1d4ed8;
+}

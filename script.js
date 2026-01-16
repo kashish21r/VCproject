@@ -121,3 +121,24 @@ submitBtn.disabled = true;
     
   });
 }
+/*********************go to ******* */
+
+// GO-TO-TOP BUTTON
+const goToTopBtn = document.getElementById("goToTopBtn");
+
+// Show/hide button on scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) { // Show after scrolling 100px
+    goToTopBtn.style.display = "block";
+  } else {
+    goToTopBtn.style.display = "none";
+  }
+});
+
+// Smooth scroll to top on click
+goToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
