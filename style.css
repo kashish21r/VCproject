@@ -1,6 +1,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
    /*  overflow-y: hidden; Removes vertical scroll */
+   margin: 0;
+   padding: 0;
 }
 
 .mobile-container {
@@ -358,14 +360,15 @@ body {
 }
 /*******************Day 9 *********************/
 .footer {
-  background: #1e293b;
+  background-color: black;
   color: #cbd5e1;
   padding: 40px 20px 20px;
-  width: 2069px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-container {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
